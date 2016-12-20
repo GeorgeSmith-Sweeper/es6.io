@@ -7,6 +7,12 @@
 <body>
 <script>
   console.log(pizza);
+  /*
+  xxxxxxxxxxxxxx
+   Temporal dead zone. Using const, the pizza variable cannot be accessed,
+   because it has not been defined before the console.log()
+  xxxxxxxxxxxxxx
+  */
   const pizza = 'Deep Dish 🍕🍕🍕';
 
 </script>

@@ -7,15 +7,19 @@
 <body>
 <script>
   {
-    const name = 'wes';
+    const name = 'George';
+    // this console.log works because it is in block
     console.log(name);
   }
+  // this console.log fails because it is not in the block
+  console.log(name);
 
+  // the let is bound to the function block
   for(let i = 0; i < 10; i++) {
     console.log(i);
     setTimeout(function() {
       console.log('The number is ' + i);
-    },1000);
+    },2000);
   }
 
 </script>
