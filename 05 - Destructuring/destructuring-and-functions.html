@@ -16,13 +16,14 @@
     return converted;
   }
 
-  function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
+  // destructures everything into variables & sets defaults
+  function tipCalc({ total, tip = 0.15, tax = 0.13 } = {}) {
     return total + (tip * total) + (tax * total);
   }
 
-  const bill = tipCalc({ tip: 0.20, total: 200 });
+  // uses the destructured values to pass into the tipCalc function
+  const bill = tipCalc({total: 200, tip: 0.20, tax: 0.13});
   console.log(bill);
-
 </script>
 </body>
 </html>
