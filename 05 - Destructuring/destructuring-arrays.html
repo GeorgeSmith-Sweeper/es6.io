@@ -7,14 +7,15 @@
 <body>
 <script>
   const details = ['Wes Bos', 123, 'wesbos.com'];
-  const [name, id, website] = details;
+  const [name, id, website] = details; // pull from array use []
   console.log(name, id, website);
 
   const data = 'Basketball,Sports,90210,23,wes,bos,cool';
-  const [itemName, category, sku, inventory] = data.split(',');
+  const [itemName, category, sku, inventory, ...other] = data.split(',');
 
   const team = ['Wes', 'Harry', 'Sarah', 'Keegan', 'Riker'];
 
+  // ...players grabs the REST of the options in the array
   const [captain, assistant, ...players] = team;
 
 </script>
