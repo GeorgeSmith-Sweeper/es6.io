@@ -10,8 +10,13 @@
   const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
   const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
 
-  const pizzas = [...featured, 'veg', ...specialty];
-  const fridayPizzas = [...pizzas];
+  // takes both arrays, and places them into one pizzas array
+  const pizzas = [...featured, ...specialty];
+
+  // arrays can be copied without mutation of the original
+  const fridayPizzas = ['canada Pie', ...pizzas];
+
+
 
   const deepDish = {
     pizzaName: 'Deep Dish',

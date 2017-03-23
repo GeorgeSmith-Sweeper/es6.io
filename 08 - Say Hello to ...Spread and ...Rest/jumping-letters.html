@@ -27,10 +27,20 @@
   </style>
 </head>
 <body>
-  <h2 class="jump">SPREADS!</h2>
-
+  <h2 class="jump">
+    SPREADS!
+  </h2>
 <script>
-  
+  const heading = document.querySelector('.jump');
+
+  // takes the letters out of the words and wraps them in spans
+  function sparanWrap(word) {
+    let mapped = [...word].map(letter => `<span>${letter}</span>`).join('');
+    return mapped;
+  }
+
+  // inserts the span wrapped string into the innerHTML of .jump
+  heading.innerHTML = sparanWrap(heading.innerText);
 </script>
 </body>
 </html>
