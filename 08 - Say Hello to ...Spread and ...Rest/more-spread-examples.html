@@ -12,7 +12,7 @@
   </div>
 <script>
   const people = Array.from(document.querySelectorAll('.people p'));
-  const names = people.map((person) => person.textContent );
+  const names = people.map((person) => person.textContent);
 
   const deepDish = {
     pizzaName: 'Deep Dish',
@@ -32,6 +32,10 @@
   const id = 632429;
   const commentIndex = comments.findIndex(comment => comment.id === id);
 
+  // slice from the start to where the comment is
+  // slice from where the comment is to the end
+  // create a new array containing those pieces
+  // must use spread to get the objects into the new array
   const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
   console.log(newComments);
 
