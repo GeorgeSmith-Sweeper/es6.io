@@ -8,17 +8,22 @@
 <script>
   const inventors = ['Einstein', 'Newton', 'Galileo'];
   const newInventors = ['Musk', 'Jobs'];
-  inventors.push(...newInventors);
-  console.log(inventors);
 
-  const name = ['Wes', 'Bos'];
+  // spread into a function
+  /* takes each of the elements from the newInventors array,
+   pushes them into the inventors array */
+  inventors.push(...inventors);
+  const name = ['George', 'Sweeper'];
 
   function sayHi(first, last) {
     alert(`Hey there ${first} ${last}`);
   }
 
+  /*
+    can spread the entire name array into the function
+    and it will fill the params!
+  */
   sayHi(...name);
-
 </script>
 </body>
 </html>
