@@ -10,15 +10,18 @@
   const last = 'bos';
   const age = 2;
   const breed = 'King Charles Cav';
+
+  // only use when property values are exactly the same
   const dog = {
-    firstName: first,
+    first,
     last,
     age,
-    breed,
-    pals: ['Hugo', 'Sunny']
-  };
+    breed
+  }
   console.log(dog);
 
+  // functions that are set within the modal object
+  // these do not need to be set with a 'create: function'
   const modal = {
     create(selector) {
 
@@ -31,8 +34,10 @@
     }
   }
 
+  // function creates the opposite color from what is given to it
   function invertColor(color) {
-      return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+    return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)
+        ).toString(16)).slice(-6);
   }
 
   const key = 'pocketColor';
@@ -43,16 +48,20 @@
     [`${key}Opposite`]: invertColor(value)
   };
 
-  const keys = ['size', 'color', 'weight'];
-  const values = ['medium', 'red', 100];
 
-  const shirt = {
-    [keys.shift()]: values.shift(),
-    [keys.shift()]: values.shift(),
-    [keys.shift()]: values.shift(),
-  }
-  console.log(shirt);
+const keys = ['size', 'color', 'weight'];
+const values = ['medium', 'red', 100];
 
+
+// goes over the keys array and values array,
+// pairs each key with the matching value
+const shirt = {
+  [keys.shift()]: values.shift(),
+  [keys.shift()]: values.shift(),
+  [keys.shift()]: values.shift()
+}
+
+console.log(shirt)
 
 </script>
 </body>
