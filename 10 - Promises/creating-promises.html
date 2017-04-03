@@ -6,11 +6,15 @@
 </head>
 <body>
 <script>
+
+  // the promise will catch the error,
+  // and let the user know where things went wrong
+  // error object lets us know the line
   const p = new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
-    }, 1000);
-  });
+      reject(Error('George can code'));
+    }, 1000)
+  })
 
   p
     .then(data => {
@@ -18,8 +22,7 @@
     })
     .catch(err => {
       console.error(err);
-    });
-
+    })
 </script>
 </body>
 </html>

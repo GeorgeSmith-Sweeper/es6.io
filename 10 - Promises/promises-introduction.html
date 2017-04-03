@@ -6,14 +6,18 @@
 </head>
 <body>
 <script>
-const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+  const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
 
-postsPromise
-  .then(data => data.json())
-  .then(data => { console.log(data) })
-  .catch((err) => {
-    console.error(err);
-  })
+  // promise grabs the data,
+  // formats the json
+  // logs the data
+  // catches and reports any errors
+  postsPromise
+    .then(data => data.json())
+    .then(data => { console.log(data) })
+    .catch((err) => {
+      console.error(err);
+    })
 
 </script>
 </body>
