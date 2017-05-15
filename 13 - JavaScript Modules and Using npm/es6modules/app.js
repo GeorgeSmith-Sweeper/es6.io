@@ -1,8 +1,12 @@
 import { uniq } from 'lodash';
 import insane from 'insane';
 import jsonp from 'jsonp';
+import { apiKey as key } from './src/config';
 
+import User, { createURL, gravatar } from './src/user';
 
-const ages = [1, 1, 4, 53, 12, 4];
+const george = new User('George Smith-Sweeper', 'george.smsweeper@gmail.com', 'george-smith-sweeper.com');
+const profile = createURL(george.name);
+const image = gravatar(george.email);
 
-console.log(uniq(ages));
+console.log(profile, image);
